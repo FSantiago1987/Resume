@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: #10121B;
+}
+
+.main-content {
+    min-height: 100vh;
+    width: 80%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.left-section{
+    grid-column: span 2;
+    background-color: #191D2B;
+    height: 100%;
+}
+.right-section{
+    grid-column: span 5;
+    background-color: #f7f7f7;
+    height: 100%;
+}
+
+.left-content{
+    padding: 2rem 3rem;
+}
+
+.profile{
+    width: 100%;
+    border-bottom: 2.3px solid #2e344e;
+    padding-bottom: 1rem;
+}
+
+.image{
+    width: 100%;
+    text-align: center;
+}
+
+.profile img {
+    width: 100%;
+    border-radius: 50%;
+    border: 8px solid #2e344e;
+}
+
+.name {
+    font-size: 1.65rem;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1rem 0;
+}
+
+.career {
+    font-size: 1.15rem;
+    color: #94d9ea;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 1rem;
+}
+
+.main-title {
+    font-size: 1.65rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #f7f7f7ec;
+    padding-top: 2rem;
+}
+
+.contact-info ul{
+    padding: 2rem 0;
+}
+
+.contact-info ul li {
+    padding: .4rem 0;
+    display: flex;
+    align-items: center;
+    color: #718096;
+}
+
+.contact-info ul li i, .references-section ul li i {
+    margin-right: 1.5rem;
+    font-size: 1.1rem;
+    color: #2d9cdb;
+    width: 6px;
+}
+
+.skills-section ul{
+    padding-top: 2rem;
+}
+
+.skills-section ul li {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.8rem;
+}
+
+.skill-title{
+    text-transform: uppercase;
+    color: #718096;
+    font-size: 0.9rem;
+    width: 70%;
+}
+
+.progress-bar{
+    width: 120%;
+    height: .4rem;
+    margin-left: -20%;
+    background-color: #189ace1f;
+    position: relative;
+    border-radius: 12px;
+}
+
+.progress{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background-color: #189ACE;
+    border-radius: 12px;
+}
+
+.html-progress{
+    width: 90%;
+}
+
+.css-progress{
+    width: 80%;
+}
+
+.react-progress, .node-progress, .mongo-progress{
+    width: 60%;
+}
+
+
+.js-progress, .csharp-progress, .sql-progress{
+    width: 50%;
+}
+
+.java-progress, .python-progress{
+    width: 30%;
+}
+
+.sub-title{
+    padding-top: 2rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: #94d9ea;
+    letter-spacing: 0.1rem;
+}
+
+.job-title{
+    color: #718096;
+    padding: .5rem 0;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 0.02rem;
+}
+
+.references-section li{
+    color: #718096;
+    padding-bottom: .4rem;
+}
+
+.right-main-content{
+    padding: 3rem 3rem;
+}
+
+.sect{
+    padding-bottom: 3rem;
+}
+
+.right-title{
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #2e344e;
+    margin-bottom: 1.2rem;
+    position: relative;
+}
+
+.right-title::after{
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: .2rem;
+    border-radius: 12px;
+    background-color: #2e344e;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.paragraph{
+    line-height: 1.5rem;
+    color: #718096;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.timeline{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.tl-company-title, .tl-job-title {
+    letter-spacing: 0.8px;
+    font-size: 1rem;
+    color: #189ACE;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1rem 0;
+}
+
+
+.tl-content{
+    border-left: 1px solid #718096;
+    padding-left: 2rem;
+    position: relative;
+}
+
+
+.tl-job-title::before{
+    content: "";
+    position: absolute;
+    width: .8rem;
+    height: .8rem;
+    background-color: #2e344e;
+    border-radius: 50%;
+    left: 0;
+    transform: translateX(-50%);
+}
+
+/************MEDIA QUERIES ************/
+@media screen and (max-width:1200px){
+    .right-title::after{
+        width: 45%;
+    }
+    .main-content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .profile img{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:874px){
+    .right-title::after{
+        width: 25%;
+    }
+    .timeline{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .tl-job-title::before{
+        display: none;
+    }
+}
+
+@media screen and (max-width:730px){
+    .right-title::after{
+        width: 0;
+    }
+    .profile img{
+        width: 60%;
+    }
+}
